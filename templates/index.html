@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Prediction System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Placement Prediction System</h1>
+
+    <p>Enter student details to predict placement status.</p>
+
+    <form action="/predict" method="POST">
+
+        <label>Gender</label>
+        <select name="Gender" required>
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label>City</label>
+        <input type="text" name="City" required>
+
+        <label>College Tier</label>
+        <select name="CollegeTier" required>
+            <option value="">Select</option>
+            <option value="Tier1">Tier1</option>
+            <option value="Tier2">Tier2</option>
+        </select>
+
+        <label>Stream</label>
+        <input type="text" name="Stream" required>
+
+        <label>Specialisation</label>
+        <input type="text" name="Specialisation" required>
+
+        <label>Hostel</label>
+        <select name="Hostel" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label>History Of Backlogs</label>
+        <select name="HistoryOfBacklogs" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <h3>Academic Performance</h3>
+
+        <label>SGPA Semester 1</label>
+        <input type="number" name="SGPA_Sem1" step="0.01" min="0" max="10" required>
+
+        <label>SGPA Semester 2</label>
+        <input type="number" name="SGPA_Sem2" step="0.01" min="0" max="10" required>
+
+        <label>SGPA Semester 3</label>
+        <input type="number" name="SGPA_Sem3" step="0.01" min="0" max="10" required>
+
+        <label>SGPA Semester 4</label>
+        <input type="number" name="SGPA_Sem4" step="0.01" min="0" max="10" required>
+
+        <label>SGPA Semester 5</label>
+        <input type="number" name="SGPA_Sem5" step="0.01" min="0" max="10" required>
+
+        <label>SGPA Semester 6</label>
+        <input type="number" name="SGPA_Sem6" step="0.01" min="0" max="10" required>
+
+        <label>SGPA Semester 7</label>
+        <input type="number" name="SGPA_Sem7" step="0.01" min="0" max="10" required>
+
+        <label>SGPA Semester 8</label>
+        <input type="number" name="SGPA_Sem8" step="0.01" min="0" max="10" required>
+
+        <label>CGPA</label>
+        <input type="number" name="CGPA" step="0.01" min="0" max="10" required>
+
+        <label>Attendance Percentage</label>
+        <input type="number" name="AttendancePercent" min="0" max="100" required>
+
+        <h3>Experience & Skills</h3>
+
+        <label>Internships</label>
+        <input type="number" name="Internships" min="0" required>
+
+        <label>Projects</label>
+        <input type="number" name="Projects" min="0" required>
+
+        <label>Workshops</label>
+        <input type="number" name="Workshops" min="0" required>
+
+        <label>Certifications</label>
+        <input type="number" name="Certifications" min="0" required>
+
+        <label>Publications</label>
+        <input type="number" name="Publications" min="0" required>
+
+        <label>Aptitude Test Score</label>
+        <input type="number" name="AptitudeTestScore" min="0" max="100" required>
+
+        <label>Soft Skills Rating</label>
+        <input type="number" name="SoftSkillsRating"
+               step="0.1" min="0" max="5" required>
+
+        <label>Coding Test Score</label>
+        <input type="number" name="CodingTestScore"
+               min="0" max="100" required>
+
+        <label>Mock Interview Score</label>
+        <input type="number" name="MockInterviewScore"
+               min="0" max="100" required>
+
+        <label>Extra Curricular</label>
+        <select name="ExtraCurricular" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <button type="submit">Predict Placement</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
